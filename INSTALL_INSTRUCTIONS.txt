@@ -1,0 +1,116 @@
+MBS Supporting Documents — Excel Add-in
+════════════════════════════════════════
+(c) MBS Advisors Ltd
+
+
+HOW TO DEPLOY (one person does this once — takes 10 minutes)
+═════════════════════════════════════════════════════════════
+
+The add-in needs to be hosted online so Excel can load it.
+We use GitHub Pages — it's free and provided by Microsoft's GitHub.
+
+
+STEP 1 — Create a free GitHub account
+──────────────────────────────────────
+1. Go to https://github.com/signup
+2. Create a free account (use any email)
+3. Verify your email address
+
+
+STEP 2 — Create a new repository
+──────────────────────────────────
+1. Go to https://github.com/new
+2. Repository name: mbs-addin
+3. Set to Public (required for free GitHub Pages)
+4. Click "Create repository"
+
+
+STEP 3 — Upload the add-in files
+──────────────────────────────────
+1. In your new repository, click "uploading an existing file"
+2. Drag ALL files from this folder into the upload box:
+     taskpane.html
+     taskpane.js
+     taskpane.css
+     commands.html
+     manifest.xml
+     icon-16.png  (if provided)
+     icon-32.png  (if provided)
+     icon-80.png  (if provided)
+3. Click "Commit changes"
+
+
+STEP 4 — Enable GitHub Pages
+─────────────────────────────
+1. In your repository, click "Settings" (top menu)
+2. Click "Pages" in the left sidebar
+3. Under "Source", select "Deploy from a branch"
+4. Branch: main, Folder: / (root)
+5. Click Save
+6. Wait 2 minutes, then your add-in is live at:
+     https://YOUR-USERNAME.github.io/mbs-addin/
+
+
+STEP 5 — Update the manifest with your URL
+───────────────────────────────────────────
+1. Open manifest.xml in Notepad
+2. Find all occurrences of:
+     YOUR-GITHUB-USERNAME
+3. Replace with your actual GitHub username
+   Example: if your username is "mbsadvisors", change:
+     https://YOUR-GITHUB-USERNAME.github.io/mbs-addin/taskpane.html
+   to:
+     https://mbsadvisors.github.io/mbs-addin/taskpane.html
+4. Save the file
+5. Upload the updated manifest.xml to GitHub (repeat Step 3 for just this file)
+
+
+STEP 6 — Install the add-in in Excel
+──────────────────────────────────────
+On EACH team member's computer:
+
+1. Open Excel
+2. Go to Insert → Get Add-ins → My Add-ins
+3. Click "Manage My Add-ins" then "Upload My Add-in"
+   OR: Go to File → Options → Trust Center → Trust Center Settings
+       → Trusted Add-in Catalogs → add a shared folder
+4. Select the manifest.xml file
+5. The "Supporting Docs" button appears in the Home ribbon tab
+
+
+USING THE ADD-IN
+════════════════
+
+1. Open 2026_Workpapers_FINAL.xlsm
+2. Click any workpaper sheet tab
+3. Click "Supporting Docs" in the Home ribbon
+4. The panel opens on the right showing documents for that sheet
+5. Click "+ Add" to attach documents (PDF, Word, Excel, images)
+6. Or drag and drop files onto the drop zone
+7. Click "Save & Embed All" to store everything inside the workbook
+8. Documents are now embedded — they travel with the workbook file
+
+
+SHARING WITH THE TEAM
+══════════════════════
+
+Once deployed, each team member just needs:
+  1. The manifest.xml file (send by email or shared drive)
+  2. To follow Step 6 above (takes 2 minutes)
+
+They do NOT need Python, GitHub accounts, or any technical knowledge.
+
+
+UPDATING THE ADD-IN
+════════════════════
+
+If you need to update the add-in in future:
+1. Edit taskpane.html or taskpane.js
+2. Upload the changed files to GitHub
+3. GitHub Pages updates automatically within a few minutes
+4. All team members get the update immediately — no reinstall needed
+
+
+SUPPORT
+════════
+Contact your MBS Advisors representative for assistance.

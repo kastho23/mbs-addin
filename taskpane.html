@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MBS Supporting Documents</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="taskpane.css"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-logo">MBS</div>
+    <div class="header-text">
+      <div class="header-title">Supporting Documents</div>
+      <div class="header-sub">MBS Advisors Ltd</div>
+    </div>
+  </div>
+
+  <!-- Current sheet banner -->
+  <div class="sheet-banner">
+    <div class="sheet-banner-label">Active workpaper</div>
+    <div class="sheet-banner-name" id="sheet-name">—</div>
+    <div class="sheet-banner-count" id="sheet-count"></div>
+  </div>
+
+  <!-- Loading state -->
+  <div id="loading" class="loading">
+    <div class="spinner"></div>
+    <div>Loading…</div>
+  </div>
+
+  <!-- Main content -->
+  <div id="main" style="display:none">
+
+    <!-- Document list -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Documents</span>
+        <button class="btn-add" id="add-btn">＋ Add</button>
+        <input type="file" id="file-input" multiple
+               accept=".pdf,.png,.jpg,.jpeg,.bmp,.tif,.tiff,.docx,.xlsx"
+               style="display:none"/>
+      </div>
+
+      <div id="doc-list">
+        <!-- populated by JS -->
+      </div>
+
+      <div id="drop-zone" class="drop-zone">
+        <div class="drop-icon">📎</div>
+        <div class="drop-text">Drop files here or click Add</div>
+        <div class="drop-sub">PDF · PNG · JPG · DOCX · XLSX</div>
+      </div>
+    </div>
+
+    <!-- Progress bar (hidden until action) -->
+    <div id="progress-wrap" class="progress-wrap" style="display:none">
+      <div class="progress-label" id="progress-label">Working…</div>
+      <div class="progress-track">
+        <div class="progress-bar" id="progress-bar" style="width:0%"></div>
+      </div>
+    </div>
+
+    <!-- Action buttons -->
+    <div class="actions">
+      <button class="btn btn-primary" id="save-btn">💾  Save &amp; Embed All</button>
+      <button class="btn btn-secondary" id="export-btn">📄  Export PDF</button>
+    </div>
+
+    <!-- Status message -->
+    <div id="status" class="status" style="display:none"></div>
+
+    <!-- Workbook summary -->
+    <div class="summary" id="summary">
+      <div class="summary-item">
+        <div class="summary-num" id="total-docs">0</div>
+        <div class="summary-lbl">docs embedded</div>
+      </div>
+      <div class="summary-item">
+        <div class="summary-num" id="total-sheets">0</div>
+        <div class="summary-lbl">workpapers with docs</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Error state -->
+  <div id="error-state" class="error-state" style="display:none">
+    <div class="error-icon">⚠️</div>
+    <div class="error-title">EMBEDDOCS sheet not found</div>
+    <div class="error-msg">
+      Please open <strong>2026_Workpapers_FINAL.xlsm</strong> to use this add-in.
+      The workbook must have an EMBEDDOCS sheet to store documents.
+    </div>
+  </div>
+
+  <script src="taskpane.js"></script>
+</body>
+</html>
