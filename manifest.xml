@@ -6,7 +6,6 @@
   xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
   xsi:type="TaskPaneApp">
 
-  <!-- Add-in identity -->
   <Id>a1b2c3d4-e5f6-7890-abcd-ef1234567890</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>MBS Advisors Ltd</ProviderName>
@@ -75,14 +74,14 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://YOUR-GITHUB-USERNAME.github.io/mbs-addin/icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://YOUR-GITHUB-USERNAME.github.io/mbs-addin/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://YOUR-GITHUB-USERNAME.github.io/mbs-addin/icon-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://kastho23.github.io/mbs-addin/icon-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://kastho23.github.io/mbs-addin/icon-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://kastho23.github.io/mbs-addin/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://mbsadvisors.co.nz"/>
-        <bt:Url id="Commands.Url"            DefaultValue="https://YOUR-GITHUB-USERNAME.github.io/mbs-addin/commands.html"/>
-        <bt:Url id="Taskpane.Url"            DefaultValue="https://YOUR-GITHUB-USERNAME.github.io/mbs-addin/taskpane.html"/>
+        <bt:Url id="Commands.Url"            DefaultValue="https://kastho23.github.io/mbs-addin/commands.html"/>
+        <bt:Url id="Taskpane.Url"            DefaultValue="https://kastho23.github.io/mbs-addin/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title"        DefaultValue="MBS Supporting Documents"/>
@@ -91,10 +90,10 @@
         <bt:String id="GetStarted.Description"  DefaultValue="Manage supporting documents for your workpapers"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="TaskpaneButton.Tooltip"
-                   DefaultValue="Open the Supporting Documents panel to add, view and embed documents for this workpaper"/>
+        <bt:String id="TaskpaneButton.Tooltip"  DefaultValue="Open the Supporting Documents panel to add, view and embed documents for this workpaper"/>
         <bt:String id="GetStarted.LearnMoreUrl" DefaultValue="https://mbsadvisors.co.nz"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
+
 </OfficeApp>
